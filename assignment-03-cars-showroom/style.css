@@ -1,0 +1,468 @@
+/* ==========================================================
+   CARS SHOWROOM — dark red automotive theme
+   ========================================================== */
+
+:root {
+    --bg-black: #0a0a0a;
+    --bg-black-soft: #111111;
+    --red: #c8102e;
+    --red-dark: #7a0c1c;
+    --red-glow: rgba(200, 16, 46, 0.35);
+    --white: #f5f5f5;
+    --grey: #9a9a9a;
+    --border: #2a2a2a;
+    --font: 'Arial', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-black);
+    color: var(--white);
+    font-family: var(--font);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------- HEADER / NAV ---------- */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: var(--bg-black);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--red);
+    margin-left: 4px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 36px;
+}
+
+.main-nav a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--grey);
+    transition: color 0.2s ease;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--white);
+    border-bottom-color: var(--red);
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--red);
+    color: var(--white);
+}
+
+.btn-primary::after {
+    content: " ↗";
+}
+
+.btn-primary:hover {
+    background: var(--red-dark);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--grey);
+}
+
+.btn-outline:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background:
+        repeating-linear-gradient(
+            100deg,
+            transparent 0px,
+            transparent 22px,
+            rgba(200, 16, 46, 0.08) 22px,
+            rgba(200, 16, 46, 0.08) 24px
+        ),
+        radial-gradient(ellipse at 70% 50%, var(--red-glow) 0%, transparent 60%),
+        var(--bg-black);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 640px;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--grey);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 32px;
+}
+
+/* ---------- INTRO STRIP ---------- */
+
+.intro-strip {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 60px;
+    background: var(--bg-black-soft);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.intro-item {
+    text-align: center;
+}
+
+.intro-item h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--red);
+}
+
+.intro-item p {
+    color: var(--grey);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+/* ---------- GENERIC PAGE BANNER (about/collection/contact) ---------- */
+
+.page-banner {
+    padding: 80px 60px 50px;
+    background:
+        repeating-linear-gradient(
+            100deg,
+            transparent 0px,
+            transparent 22px,
+            rgba(200, 16, 46, 0.06) 22px,
+            rgba(200, 16, 46, 0.06) 24px
+        ),
+        var(--bg-black);
+    border-bottom: 1px solid var(--border);
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    color: var(--grey);
+}
+
+/* ---------- HIGHLIGHT SECTION (home) ---------- */
+
+.highlight-section {
+    padding: 80px 60px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.highlight-section h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.highlight-section p {
+    color: var(--grey);
+    margin-bottom: 30px;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+
+.about-content {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+}
+
+.about-text h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.about-text p {
+    color: var(--grey);
+    margin-bottom: 16px;
+}
+
+.about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.value-card {
+    background: var(--bg-black-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 20px 24px;
+}
+
+.value-card h3 {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    color: var(--grey);
+    font-size: 0.9rem;
+}
+
+/* ---------- CAR COLLECTION GRID ---------- */
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 60px;
+}
+
+.car-card {
+    background: var(--bg-black-soft);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.car-card:hover {
+    border-color: var(--red);
+    transform: translateY(-4px);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.car-meta {
+    color: var(--grey);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.car-price {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ---------- CONTACT PAGE ---------- */
+
+.contact-content {
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--grey);
+    margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: var(--bg-black-soft);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 12px 14px;
+    font-family: var(--font);
+    font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--red);
+}
+
+.contact-form button {
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.contact-details {
+    background: var(--bg-black-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 30px;
+    height: fit-content;
+}
+
+.contact-details h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.contact-details p {
+    color: var(--grey);
+    margin-bottom: 10px;
+}
+
+.contact-details strong {
+    color: var(--white);
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+    padding: 30px 60px;
+    text-align: center;
+    color: var(--grey);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+    .site-header,
+    .hero,
+    .page-banner,
+    .about-content,
+    .car-grid,
+    .contact-content,
+    .intro-strip,
+    .site-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav ul {
+        gap: 18px;
+    }
+
+    .intro-strip {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+}

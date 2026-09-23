@@ -1,0 +1,46 @@
+
+body{
+    margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+
+
+}
+nav{
+   background-color: black;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+  border-radius: 50px
+   
+}
+nav{
+    width: 650px;
+    margin: 130px auto;
+    justify-content: space-between;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.Links{
+    display: flex;
+    gap: 20px;
+}
+.Email{
+    background-color: white;
+    color: black;
+    padding: 9px 15px;
+    border-radius: 90px;
+}
+
+h1{
+  
+ text-align: center;
+ background-color: black;
+ color: red;
+ padding: 4px 10px;
+ margin:  auto;
+ border-radius: 50px;
+ width: 300px;
+}
